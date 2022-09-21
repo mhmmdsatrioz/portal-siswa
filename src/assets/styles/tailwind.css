@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* .sidebar {
+  background: gray;
+} */
+
+.black {
+  background: #22262f;
+}

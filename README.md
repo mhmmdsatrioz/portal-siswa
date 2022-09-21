@@ -31,7 +31,7 @@ src
 ├── components      => Common shared reusabled global component
 ├── pages           => Routing of pages
 ├── types           => Interface typescript
-├── store           => Global state management
+├── stores         => Global state management
 ├──
 ├──
 
