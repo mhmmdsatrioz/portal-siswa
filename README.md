@@ -10,7 +10,7 @@
 
 ## About
 
-    This is a school student monitoring project intended for students who violate the rules
+This is a school student monitoring project intended for students who violate the rules
 
 ## Introduce & Architecture
 
