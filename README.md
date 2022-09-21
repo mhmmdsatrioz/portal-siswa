@@ -10,12 +10,12 @@
 
 ## About
 
-This is a school student monitoring project intended for students who violate the rules
+    This is a school student monitoring project intended for students who violate the rules
 
 ## Introduce & Architecture
 
 - ⚡️ [React Js](https://beta.reactjs.org/) - Yooo
-- [Vite ](https://vitejs.dev/) - Next Generation Frontend Tooling
+- 💻 [Vite ](https://vitejs.dev/) - Next Generation Frontend Tooling
 - 💪 [Typescript](https://www.typescriptlang.org/) - Of course
 - 🎨 [Tailwind](https://tailwindcss.com/) - next generation utility-first CSS
 - 🐶 [Husky ](https://beta.reactjs.org/) - Improve code quality with linting and code formatting
