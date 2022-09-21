@@ -8,6 +8,13 @@
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "pre-push": "npm test",
+      "...": "..."
+    }
+  },
   "dependencies": {
     "eslint": "^8.23.1",
     "prettier": "^2.7.1",
