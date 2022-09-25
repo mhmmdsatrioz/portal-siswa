@@ -65,17 +65,23 @@ function Head() {
 
   return (
     <>
-      <div style={{ width: 256 }} className="flex-row flex">
-        <div className="w-[200px]">
-          <SidebarComponents
-            menuItems={menuItems}
-            options={options}
-            user={user}
-          />
+      <div className="flex flex-col">
+        <div
+          style={{ width: 256 }}
+          className={` flex justify-between p-5 z-[99]   items-center w-full h-[70px] fixed`}
+        >
+          <div className="w-[200px]">
+            <SidebarComponents
+              menuItems={menuItems}
+              options={options}
+              user={user}
+            />
+          </div>
         </div>
-      </div>
-      <div className="flex-auto pl-24 pt-6 dark:bg-gray-600 bg-slate-100 min-h-screen ">
-        <Outlet />
+        {/* <div className="flex-auto pl-24 pt-6 dark:bg-gray-600 bg-slate-100 min-h-screen "> */}
+        <div className="flex-1  over">
+          <Outlet />
+        </div>
       </div>
     </>
   );
