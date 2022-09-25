@@ -12,8 +12,8 @@ export interface IOptionMenu {
 }
 
 export interface IUserMenu {
-  name: string;
-  avatar: string;
-  status: string;
+  name: any;
+  avatar: any;
+  status: any;
   onLogout: () => void;
 }
