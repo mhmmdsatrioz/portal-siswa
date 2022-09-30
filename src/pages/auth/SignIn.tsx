@@ -1,6 +1,7 @@
 import React from 'react';
 import { HiOutlineKey, HiOutlineMail } from 'react-icons/hi';
 import { Formik, Form } from 'formik';
+import { useAuthStore } from 'stores/AuthAPI';
 
 const initialValues = {
   email: '',
@@ -8,6 +9,8 @@ const initialValues = {
 };
 
 const SignIn = () => {
+  const fetchLogin = useAuthStore(state => state.fetchLogin);
+
   return (
     <>
       <div className="flex items-center h-screen justify-center">
@@ -15,6 +18,7 @@ const SignIn = () => {
           initialValues={initialValues}
           onSubmit={values => {
             console.log(values);
+            fetchLogin(values);
           }}
         >
           {({ values, handleChange, handleSubmit, errors, setFieldValue }) => {
