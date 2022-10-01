@@ -19,6 +19,7 @@ This is a school student monitoring project intended for students who violate th
 - 💪 [Typescript](https://www.typescriptlang.org/) - Of course
 - 🎨 [Tailwind](https://tailwindcss.com/) - next generation utility-first CSS
 - 🐶 [Husky ](https://beta.reactjs.org/) - Improve code quality with linting and code formatting
+- 🐼 [Zustand](https://zustand-demo.pmnd.rs/) - State management in React fast and scalable
 
 - 📦 [Yarn](https://yarnpkg.com/) - A Good Package manager for JavaScript
 

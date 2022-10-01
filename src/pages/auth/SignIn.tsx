@@ -9,7 +9,7 @@ const initialValues = {
 };
 
 const SignIn = () => {
-  const fetchLogin = useAuthStore(state => state.fetchLogin);
+  // const fetchLogin = useAuthStore(state => state.fetchLogin);
 
   return (
     <>
@@ -18,7 +18,7 @@ const SignIn = () => {
           initialValues={initialValues}
           onSubmit={values => {
             console.log(values);
-            fetchLogin(values);
+            // fetchLogin(values);
           }}
         >
           {({ values, handleChange, handleSubmit, errors, setFieldValue }) => {
