@@ -35,7 +35,7 @@ const Sidebar = () => {
   return (
     <>
       <div className="flex">
-        <div id="header">
+        <div id="header" className="mr-10">
           {/* collapsed props to change menu size using menucollapse state */}
           <ProSidebar collapsed={menuCollapse}>
             <SidebarHeader>
@@ -66,7 +66,7 @@ const Sidebar = () => {
             </SidebarFooter>
           </ProSidebar>
         </div>
-        <div className="pl-24">
+        <div className="pl-24 w-auto">
           <Outlet />
         </div>
       </div>

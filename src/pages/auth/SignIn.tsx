@@ -2,23 +2,33 @@ import React from 'react';
 import { HiOutlineKey, HiOutlineMail } from 'react-icons/hi';
 import { Formik, Form } from 'formik';
 import { useAuthStore } from 'stores/AuthAPI';
-
+import API from 'api/API';
+import { IPayloadLogin } from 'types/Auth';
 const initialValues = {
   email: '',
   password: '',
 };
 
 const SignIn = () => {
-  // const fetchLogin = useAuthStore(state => state.fetchLogin);
+  const fetchLogin = useAuthStore(state => state.fetchLogin);
+  const { auth } = useAuthStore(state => state);
+  console.log(auth, 'auth');
+  // const fetchLogin = async (data: IPayloadLogin) => {
+  //   const BASE_URL = 'https://localhost:5000/api';
+  //   const response = await API.HTTP.post(`${BASE_URL}/login`, data);
+  //   return response.data;
+  // };
 
   return (
     <>
+      {/* <h1>{auth.data?.username}</h1> */}
+      <h1>Testing</h1>
       <div className="flex items-center h-screen justify-center">
         <Formik
           initialValues={initialValues}
-          onSubmit={values => {
-            console.log(values);
-            // fetchLogin(values);
+          onSubmit={async (values, { setSubmitting }) => {
+            const res = await fetchLogin(values);
+            console.log(res, 'res');
           }}
         >
           {({ values, handleChange, handleSubmit, errors, setFieldValue }) => {
@@ -110,7 +120,8 @@ const SignIn = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="flex justify-center items-center mt-6">
+                  <div>{auth?.user.data.username}</div>
+                  {/* <div className="flex justify-center items-center mt-6">
                     <a
                       href="#"
                       target="_blank"
@@ -133,7 +144,7 @@ const SignIn = () => {
                         You don&apos;t have an account?
                       </span>
                     </a>
-                  </div>
+                  </div> */}
                 </div>
               </Form>
             );
